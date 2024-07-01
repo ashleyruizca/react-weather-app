@@ -19,7 +19,7 @@ export default function Weather(props) {
     });
   }
 
-  if (WeatherData.ready) {
+  if (weatherData.ready) {
     return (
       <div className="Weather">
         <form>
@@ -44,7 +44,7 @@ export default function Weather(props) {
         <h1>{weatherData.city}</h1>
         <ul>
           <li>
-            <FormattedDate date={WeatherData.date} />
+            <FormattedDate date={weatherData.date} />
           </li>
           <li className="text-capitalize">{weatherData.description}</li>
         </ul>
