@@ -17,7 +17,7 @@ export default function WeatherForecast(props) {
   }
 
   function load() {
-    let apiKey = "b400ae3b711a616262d18b0ca2cbe78f";
+    let apiKey = "9eca7aac0b071aa16e3cb063adba0785";
     let longitude = props.coordinates.lon;
     let latitude = props.coordinates.lat;
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
@@ -37,15 +37,14 @@ export default function WeatherForecast(props) {
                 </div>
               );
             } else {
-              load();
-
-              return null;
+              return <></>;
             }
           })}
         </div>
       </div>
     );
   } else {
+    load();
     return null;
   }
 }
